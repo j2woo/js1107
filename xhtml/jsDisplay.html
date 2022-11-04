@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트로 출력하기</title>
+    <script>
+        //브라우저 화면에 출력
+        document.write("<p>안녕하세요</p>");
+        //대화상자에 출력, 요즘에는 팝업 시로해
+        //alert("대화상자에 출력");
+        // 콘솔에 출력
+        //콘솔 탭에서 확인, 이걸 권장
+        console.log("콘솔에 출력");
+
+        gv=100;
+        function get() {
+            console.log(gv);
+            two=200;
+            let three=300;
+        }
+        console.log(gv);
+        get();
+        // 키워드 없이 이름을 만들어서 함수가 호출된 이후에
+        //어느곳에서든지 사용이 가능한 global이 되어버림.
+        console.log(two);
+        //키워드와 함께 만들어져서 자신의 영역에서만 사용 가능                                                
+        //console.log(three);
+        var ar=new Array(2);
+        ar=["고양이", "멍멍이"];
+        console.log(ar.toString());
+        console.log(ar);
+        console.log(ar[0]);
+        console.log(ar[-1]);
+        console.log(ar[1]);
+
+
+        //var input=prompt("숫자 입력");
+       //console.log(Number(input)+1);
+
+        var data=20;
+        console.log(data++);
+        console.log(data);
+        var a=1;
+        var b=2;
+        console.log(a+b);
+        console.log(++a);
+        //자료형 확인 엑스 값만 확인 숫자와 문자열도 가능
+        console.log(Number(1) < String(2));
+        console.log(Number(1) == String(1));
+        console.log(Number(1) === String(2));
+        console.log(Number(1) != String(1));
+        console.log(Number(1) !== String(1));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
