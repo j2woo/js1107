@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        /*
     console.log(~14); //1의 보수는 부호는 반대, 절대값 1차이
     console.log(27 & 14); //10
     console.log(27 | 14); 
@@ -16,7 +17,58 @@
     console.log(14>>2);  // 양수는 >>>과 같음
     console.log(14>>>2);
     console.log(-14>>2); //음수의 경우는 >>> 과 결과가 다름
-    console.log(-14>>>2);
+    console.log(-14>>>2);*/
+    var x=10;
+    // 앞의 식의 결과가 false면 뒤의 식을 확인하지 않음
+    let result =x>10 && x++;
+    console.log(result);
+    console.log(x);
+    result=x++ && x>10;
+    console.log(result);
+    console.log(x);
+
+    //js는 boolean이 아니어도 && 연산을 확인할 수 있음
+    result=true && 10;
+    console.log(result);  //10
+    result=true || 10;
+    console.log(result); // true
+
+    let data1=null;
+    let data2=[3,2];
+    //값이 null일 때 많이 사용
+    //data1이 falsy라면 data2 대입, truthy라면 data1 대입
+    result = data1 || data2;
+    //문자열과 다른 데이터를 +하면 다른 데이터를 문자열로 변환해서 결합
+    console.log("결과"+result);
+    
+    console.log("12"*3);
+
+    var a1=20;
+    var a2=30;
+    // 맨 앞의 내용이 true이면 다음 내용이 남고,
+    // 그렇지 않으면 마지막 내용이 남는다.
+    let max=(a1>a2)?a1:a2;
+    console.log(max);
+
+    //nullish operator
+    var data3=0;
+    var data4="javascript";
+
+    // 0은 falsy값이라서 data2가 남는다.
+    let result1=data3 || data4;
+    console.log(result1);
+    //data1이 NULL이 아니기 때문에 data1이 남는다
+    // ?? falsy를 판단하는 것이 아니고 데이터의 존재여부를 확인
+    let result2=data3 ?? data4;
+    console.log(result2);
+    
+    var str="카리나";
+    console.log(typeof str);
+
+    var ar=["고양이", "멍멍"];
+    console.log("멍멍" in ar);
+    var arr=[1,2];
+    console.log(1 in arr);
     </script>
 </body>
 </html>
