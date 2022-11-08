@@ -10,12 +10,17 @@
         class Member{
             // 클래스 안에 메서드를 만들 때는 function 생략
             getName() {
-                return "이름";
+                return this.name;
+            }
+
+            setName(name){
+                this.name=name;
             }
         }
 
         //클래스의 인스턴스 만들기
         let member=new Member();
+        member.setName("박지우");
         console.log(member.getName());
 
     </script>
