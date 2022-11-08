@@ -22,7 +22,10 @@
         let member=new Member();
         member.setName("박지우");
         console.log(member.getName());
-
+        //Member 클래스에 getJob이라는 속성 추가
+        Member.prototype.getJob=function(){
+            return "직업";
+        }
     </script>
 </head>
 <body>
