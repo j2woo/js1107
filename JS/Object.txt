@@ -1,0 +1,25 @@
+객체(Object)
+=> 데이터를 저장할 수 있는 속성(variable - property)과 기능을 수행하는 메서드(function - method)를
+모아놓은 것
+=>종류
+사용자 정의 객체: 개발자가 필요에 의해서 생성
+내장 객체: JavaScript에서 제공하는 객체-API(Application Programming Interface)나
+SDK(Software Development Kit)라고도 함
+
+3rd Party 객체: 다른 개발자나 회사가 제공(Library, Framework: Solution)
+
+3. 사용자 정의 객체
+1)생성
+=>var(let이나 const) 이름=  {"속성이름":데이터,"메서드이름",메서드코드,}
+=>var(let이나 const) 이름= new 생성자(매개변수 나열)
+
+2) 내부 요소 호출(.을 이용)
+이름.속성이름
+이름.메서드이름(매개변수)
+=>js에서는 . 대신에 [속성이름]으로 속성 호출이 가능한데 이때는 문자열 형태('', "")로 입력해야해.
+
+var obj=["name":"adam"];
+obj.name;
+obj["name"]
+
+=> 내부 속성은 중복해서 만들어지지 않기 때문에 동일한 이름에 2번 삽입하면 이전 내용이 없어지고 새로운 내용으로 변경됨.

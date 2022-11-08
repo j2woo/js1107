@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-         var index=0;
+        
         
         for(var i=0;i<5;i++){
-            
+            //첫번째 공백 출력
             for(var j=0;j<5-i;j++){
                 document.write("&nbsp");
             }
-            if(i==0){
-                document.write(index);
-                index++;
-                document.write("<br/>")
-                continue;
-            }
-            document.write(index++);
-            for(var j=1;j<=2*i-1;j++){
-                document.write("&nbsp");
-            }
-            document.write(index++);
-            document.write("<br/>")
-        }
 
+            if(i>=1){//둘 다 홀수
+                //왼쪽 수
+                document.write(2*i-1);
+                //가운데 공백
+                for(var j=0;j<2*i-1;j++){
+                    document.write("&nbsp");
+                }
+            }
+            //0부터 짝수 출력
+            document.write(2*i);
+            //다음 줄
+            document.write("<br/>");
+        }
+/*
         for(var i=0;i<11;i++){
             if(index>9){
                 document.write(index-10);
@@ -35,10 +36,10 @@
             }
             index++;
         }
-        
+       */ 
     </script>
 </head>
 <body>
 
 </body>
-</html>
+</html>                                                                
