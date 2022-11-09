@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+        //배열은 순차적으로 대입됩니다.
+        var ar = [100, 200, 300, 400];
+        let [one, two, three, four] = ar;
+        console.log(one);
+
+        //Iterator가 없기 때문에 순차적으로 대입되는 것이 아니고 이름을 보고 대입됩니다.
+        //순서바꿔도 상관 무
+        var obj = { "name1": "박지우", "age1": 26,"company":"j","group":"g" };
+        let { age, name } = obj;
+        console.log(age);
+
+        // let display=(ob)=>{
+        let display = ({ msg, n }) => {
+
+           // let { msg, n } = ob;
+            for (let i = 0; i < n; i++) {
+                console.log(msg);
+            }
+        }
+
+        display({ n: 3, msg: "안녕하세요" });
+
+
+        let [first, ...etc]=ar;
+        console.log(etc);
+        console.log(first);
+
+      let  {name1,age1, ...att}=obj;
+      console.log(att);
+
+      function rest({name1, age1, ...attr}){
+        console.log(attr);
+      }
+      rest(obj);
+
+      //기본값 설정 가능, 통상적으로 뒤에서부터
+      let [a,b,c,d,e=500]=ar;
+      console.log(e);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
