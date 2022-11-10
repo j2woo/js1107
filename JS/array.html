@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script>
+        // 배열 생성
+        var ar1=["지우","디우","우","우우"];
+        var ar2=["라이언","어피치","네오"];
+
+        // 2개의 배열 합치기
+        // Map Reduce Programming에서 각각의 데이터로 처리한 후 결과를 합친다.
+        var subject=ar1.concat(ar2);
+
+        //전체 배열을 확인
+        console.log(subject);
+
+        // 배열의 데이터를 순서대로 순회
+        for(attr of subject){
+            console.log(attr);
+        }
+
+        // 처음에 데이터를 추가하고 처음에 삽입한 데이터를 제거
+        // Queue(First In First Out- 스케줄링에 이용)
+        // javascript에서는 unshift와 shift로 구현되어 있음
+        subject.unshift("unshift");
+      
+        console.log(subject);
+        subject.shift();  console.log(subject);
+
+        //마지막에 데이터를 추가하고 마지막에 삽입한 데이터를 제거
+        //Stack(Last In First Out -복귀 주소 저장에 이용)
+        //javascript에서는 push와 pop으로 구현되어 있음
+        subject.push("Linux");
+        console.log(subject);
+
+        // 정렬(Sorting)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

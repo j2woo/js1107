@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // 이 문자열에서 GCCG를 찾아서 첫글자의 위치를 전부 출력하시오
+        // 앞에서 사용한 데이터는 다시 사용하면 안됑
+        var str="CGCCGDKSKDGCCGCCGDKDGCCGDS"
+        var check = "GCCG";
+        for (var i = 0; i < str.length; i++) {
+            for (var j = 0; j < 4; j++) {
+                if (str.charAt(i + j) === check.charAt(j)) {
+                    if (j == 3) {
+                        console.log(i);
+                        i += j;                         
+                    }
+                }else{
+                    break;
+                }
+            }
+        }                                                     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
